@@ -15,7 +15,7 @@ matrix_stat['avrSD'] = matrix_stat['sumSD']/size
 matrix_stat['max'] = matrix.max()
 matrix_stat['min'] = matrix.min()
 
-print(matrix_stat)
+# print(matrix_stat)
 
 for key in matrix_stat.keys():
     matrix_stat[key] = float(matrix_stat[key])
@@ -29,5 +29,5 @@ for i in range(0, size):
     for j in range(0, size):
         norm_matrix[i][j] = matrix[i][j]/matrix_stat['sum']
 
-print(norm_matrix.sum())
+# print(norm_matrix.sum())
 np.save("norm_matrix", norm_matrix)
